@@ -3,6 +3,11 @@
 <title>Mailroom</title>
 </head>
 <body>
+	<nav>
+		<a id = "home" href = " {{ url_for('home') }} ">Home</a>
+		<a id = "new" href = " {{ url_for('new') }}"> New Donation</a>
+		<a id = "find" href = " {{ url_for('find') }}">Find Specific Donor</a>
+	</nav>
 	<h1>Donations</h1>
 	<h2>{% block subtitle %} {% endblock subtitle %}</h2>
 	{% block content %} {% endblock content %}
