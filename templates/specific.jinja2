@@ -1,0 +1,10 @@
+{% extends 'base.jinja2' %}
+
+{% block subtitle %}Donations from: {{ donor_name }}{% endblock subtitle %}
+
+{% block content %}
+    {% for transaction in donations if transaction.donor.name == donor_name %}
+        {{ transaction.donor.name }}: {{ transaction.value }}<br>
+    {% endfor %}
+
+{% endblock content %}
